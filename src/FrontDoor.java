@@ -19,14 +19,14 @@ public class FrontDoor {
 
         double cost = house.materialsCost(lumber,windows); //calculations
         cost = Math.round(cost * 100.00) / 100.00;
-        cost = Double.parseDouble(formatter.format(cost));
+        String costString = (formatter.format(cost));
         double costTaxed = house.totalWithTax(cost);
         costTaxed = Math.round(costTaxed * 100.00) / 100.00;
-        costTaxed = Double.parseDouble(formatter.format(costTaxed));
+        String costTaxedString = (formatter.format(costTaxed));
 
 
-        System.out.println("Total Materials Cost: " + cost); //final output
-        System.out.println("Grand Total after Tax: " + costTaxed);
+        System.out.println("Total Materials Cost: " + costString); //final output
+        System.out.println("Grand Total after Tax: " + costTaxedString);
     }
 
 }
